@@ -17,6 +17,10 @@ body {
   padding: 75px 0;
 }
 
+.layout_padding3 {
+  padding: 50px 0;
+}
+
 .layout_padding2-top {
   padding-top: 75px;
 }
@@ -735,6 +739,16 @@ header {
   position: relative;
 }
 
+.service_section .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.service_section .col-sm-6.col-md-4 {
+  display: flex;
+  flex: 1;
+}
+
 .service_section .box {
   margin-top: 30px;
   text-align: center;
@@ -759,6 +773,7 @@ header {
 .center-row {
   display: flex;
   justify-content: center;
+  flex-wrap: nowrap; 
 }
 
 .center-row .col-sm-6.col-md-4 {flex: 0 0 auto;}
@@ -835,96 +850,54 @@ header {
   margin-bottom: 45px;
 }
 
-.contact_section .row {
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-}
-
-.contact_section .form_container {
-  background-color: #003471;
-  padding: 45px;
-}
-
-.contact_section .form_container .form-control {
+.card-container {
+  display: flex;
+  gap: 20px;
   width: 100%;
-  border: none;
-  height: 50px;
-  margin-bottom: 15px;
-  padding-left: 15px;
-  outline: none;
-  color: #101010;
-  -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
-  border-radius: 0;
+  padding: 0 10px;
+  flex-wrap: wrap
 }
 
-.contact_section .form_container .form-control::-webkit-input-placeholder {
-  color: #565554;
-}
-
-.contact_section .form_container .form-control:-ms-input-placeholder {
-  color: #565554;
-}
-
-.contact_section .form_container .form-control::-ms-input-placeholder {
-  color: #565554;
-}
-
-.contact_section .form_container .form-control::placeholder {
-  color: #565554;
-}
-
-.contact_section .form_container .form-control.message-box {
-  height: 95px;
-}
-
-.contact_section .form_container .btn_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.contact_section .form_container .btn_box button {
-  border: none;
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 12px 55px;
-  background-color: #da7426;
-  color: #ffffff;
-  border-radius: 0px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-  border: 1px solid #da7426;
-}
-
-.contact_section .form_container .btn_box button:hover {
-  background-color: transparent;
-  color: #da7426;
-}
-
-.contact_section .map_container {
-  height: 100%;
-  min-height: 375px;
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  padding: 0;
+  transition: transform 0.3s ease-in-out;
+  flex: 1;
+  max-width: 100%;
+  padding: 20px;
+  text-align: justify;
+  box-sizing: border-box;
 }
 
-.contact_section .map_container .map {
-  height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
 }
 
-.contact_section .map_container .map #googleMap {
+.card h3 {
+  margin: 0;
+  padding-bottom: 10px;
+  color: #d2691e;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.card .card-img-box {
+  width: 100%;
+  height: 200px; 
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.card .card-img-box img {
+  width: 100%;
   height: 100%;
+  object-fit: cover; 
 }
 
 .client_section .heading_container {
@@ -1018,7 +991,6 @@ header {
   background-color: #003471;
 }
 
-/* info section */
 .info_section {
   position: relative;
   background-color: #252525;
@@ -1164,8 +1136,6 @@ header {
   margin: 0;
 }
 
-/* end info section */
-/* footer section*/
 .footer_section {
   position: relative;
   background-color: #121212;
@@ -1181,4 +1151,3 @@ header {
 .footer_section p a {
   color: inherit;
 }
-/*# sourceMappingURL=style.css.map */
